@@ -13,3 +13,8 @@ dependencies:
   - ipykernel
   - jupyterlab
   - dash-core-components
+  - gunicorn
+  - altair
+
+
+
