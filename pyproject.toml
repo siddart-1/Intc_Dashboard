@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "intel-cpu-dashboard"
+version = "0.1.0"
+description = "A dashboard for comparing Intel CPU performance and price trends."
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^2.0.0"
+plotly = "^5.0.0"
+dash = "^2.14.0"
+flask = "^3.0.0"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.0"
+scipy = "^1.11.0"
+numpy = "^1.24.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0.0"
+black = "^24.0.0"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
