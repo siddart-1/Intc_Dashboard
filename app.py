@@ -5,7 +5,9 @@ from dash import dcc, html
 from dash.dependencies import Input, Output
 
 # Load dataset
-df = pd.read_csv("data/raw/df_5.csv")
+#df = pd.read_csv("data/raw/df_5.csv")
+df = pd.read_csv("data/raw/df_5.csv", encoding="utf-8", on_bad_lines="skip")
+
 print(df.columns)
 df.columns = df.columns.str.replace(r'\xad', '', regex=True)  # Removes soft hyphen
 df.rename(columns={'codename': 'codename'}, inplace=True)  # Rename properly with capitalized format
@@ -156,6 +158,9 @@ def update_graphs(selected_series, year_range, selected_cache, selected_codename
     fig4.update_traces(marker=dict(size=8))
 
     return fig1, fig2, fig3, fig4
+
+# Expose Flask server for Gunicorn
+server = app.server  
 
 if __name__ == '__main__':
     app.run_server(debug=True)
