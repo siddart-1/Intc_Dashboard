@@ -1,6 +1,5 @@
 alabaster==1.0.0
 alt==0.0.4
-altair @ file:///home/conda/feedstock_root/build_artifacts/altair-split_1734244716962/work
 altair_ally==0.1.1
 annotated-types @ file:///home/conda/feedstock_root/build_artifacts/annotated-types_1733247046149/work
 anyio @ file:///home/conda/feedstock_root/build_artifacts/anyio_1736174388474/work
